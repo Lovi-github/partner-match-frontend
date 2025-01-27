@@ -3,8 +3,9 @@
 </script>
 
 <template>
-    主页
+    个人页
 </template>
+
 <style scoped>
 
 </style>

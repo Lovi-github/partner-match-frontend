@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { showToast } from 'vant';
+import {showToast} from 'vant';
+import HomeView from "@/views/HomeView.vue";
+import TeamView from "@/views/TeamView.vue";
+import MineView from "@/views/MineView.vue";
 
 
 const active = ref(0);
-const onChange = (index) => showToast(`标签 ${index}`);
+const onChange = (index) => {
+    // showToast(`${index}`);
+    // console.log(active.value)
+}
 
 </script>
 
@@ -15,12 +21,23 @@ const onChange = (index) => showToast(`标签 ${index}`);
             <van-icon name="search" size="18" />
         </template>
     </van-nav-bar>
+    <!--内容部分-->
+    <div class="content">
+        <template v-if="active === 0">
+            <home-view></home-view>
+        </template>
+        <template v-if="active === 1">
+            <TeamView></TeamView>
+        </template>
+        <template v-if="active === 2">
+            <MineView></MineView>
+        </template>
+    </div>
     <!--底部导航栏-->
     <van-tabbar v-model="active" @change="onChange">
-        <van-tabbar-item icon="home-o">标签 1</van-tabbar-item>
-        <van-tabbar-item icon="search">标签 2</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">标签 3</van-tabbar-item>
-        <van-tabbar-item icon="setting-o">标签 4</van-tabbar-item>
+        <van-tabbar-item icon="home-o">主页</van-tabbar-item>
+        <van-tabbar-item icon="search">队伍</van-tabbar-item>
+        <van-tabbar-item icon="friends-o">个人</van-tabbar-item>
     </van-tabbar>
 
 

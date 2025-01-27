@@ -3,8 +3,9 @@
 </script>
 
 <template>
-    主页
+    队伍页
 </template>
+
 <style scoped>
 
 </style>
