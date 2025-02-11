@@ -7,10 +7,10 @@ import MineView from "@/views/MineView.vue";
 
 
 const active = ref(0);
-const onChange = (index) => {
-    // showToast(`${index}`);
-    // console.log(active.value)
-}
+// const onChange = (index) => {
+//     showToast(`${index}`);
+//     console.log(active.value)
+// }
 
 </script>
 
@@ -23,24 +23,14 @@ const onChange = (index) => {
     </van-nav-bar>
     <!--内容部分-->
     <div class="content">
-        <template v-if="active === 0">
-            <home-view></home-view>
-        </template>
-        <template v-if="active === 1">
-            <TeamView></TeamView>
-        </template>
-        <template v-if="active === 2">
-            <MineView></MineView>
-        </template>
+        <router-view></router-view>
     </div>
     <!--底部导航栏-->
-    <van-tabbar v-model="active" @change="onChange">
-        <van-tabbar-item icon="home-o">主页</van-tabbar-item>
-        <van-tabbar-item icon="search">队伍</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">个人</van-tabbar-item>
+    <van-tabbar route >
+        <van-tabbar-item icon="home-o" to="/">主页</van-tabbar-item>
+        <van-tabbar-item icon="search" to="/team" >队伍</van-tabbar-item>
+        <van-tabbar-item icon="friends-o" to="/mine">个人</van-tabbar-item>
     </van-tabbar>
-
-
 
 </template>
 
