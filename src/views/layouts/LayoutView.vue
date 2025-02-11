@@ -16,9 +16,12 @@ const active = ref(0);
 
 <template>
     <!--顶部导航栏-->
-    <van-nav-bar title="标题" left-text="返回" left-arrow>
+    <van-nav-bar title="标题" left-text="返回" left-arrow >
         <template #right>
-            <van-icon name="search" size="18" />
+            <!--进入搜索页面-->
+            <router-link to="/search">
+                <van-icon name="search" size="18" />
+            </router-link>
         </template>
     </van-nav-bar>
     <!--内容部分-->
