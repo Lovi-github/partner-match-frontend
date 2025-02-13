@@ -3,7 +3,24 @@
 </script>
 
 <template>
-    个人页
+    <van-cell title="昵称" is-link to="/editUserInfo" value="lovi" />
+    <van-cell title="账号" is-link to="/editUserInfo" value="loviAc" />
+    <!--todo：头像单独处理-->
+    <!--
+    https://img1.baidu.com/it/u=2874422640,3007073968&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=800
+    -->
+    <van-cell title="头像" is-link to="/editUserInfo" >
+        <van-image
+            width="4rem"
+            height="4rem"
+            fit="cover"
+            src="https://img1.baidu.com/it/u=2874422640,3007073968&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=800"
+        />
+    </van-cell>
+    <van-cell title="性别" is-link to="/editUserInfo" value="女" />
+    <van-cell title="电话" is-link to="/editUserInfo" value="1234" />
+    <van-cell title="邮箱" is-link to="/editUserInfo" value="xx123@qq.com" />
+    <van-cell title="注册时间" is-link to="/editUserInfo" value="2025/02/13 16:57:53" />
 </template>
 
 <style scoped>
