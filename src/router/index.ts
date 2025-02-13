@@ -4,6 +4,7 @@ import TeamView from "@/views/TeamView.vue";
 import MineView from "@/views/MineView.vue";
 import SearchView from "@/views/SearchView.vue";
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
