@@ -23,14 +23,13 @@ const router = createRouter({
       path: '/mine',
       name: 'mine',
       component: MineView,
-      children: [
-        {
-          path: 'edit',
-          name: 'editUserInfo',
-          component: EditUserInfoView,
-        },
-      ],
     },
+    {
+      path: '/editUser',
+      name: 'editUserInfo',
+      component: EditUserInfoView,
+    },
+
     {
       path: '/search',
       name: 'search',
